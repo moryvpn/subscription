@@ -1,3 +1,150 @@
-ss://bm9uZTp0Lm1lL01vcnlWUE4=@127.0.0.1:1080#%E2%9D%8C%D8%A8%D9%87+%D8%AF%D9%84%DB%8C%D9%84+%D8%A7%D8%B3%D8%AA%D9%82%D8%A8%D8%A7%D9%84+%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%A7%D9%86+%D8%B9%D8%B2%DB%8C%D8%B2%D8%8C+%D8%B3%D8%A7%D8%A8+%D8%A7%D8%AE%D8%AA%D8%B5%D8%A7%D8%B5%DB%8C+%D8%BA%DB%8C%D8%B1%D9%81%D8%B9%D8%A7%D9%84+%DA%AF%D8%B1%D8%AF%DB%8C%D8%AF%E2%9D%8C
-ss://bm9uZTp0Lm1lL01vcnlWUE4=@127.0.0.1:1080#%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF%E2%80%8C%D9%87%D8%A7%DB%8C+%D8%AC%D8%AF%DB%8C%D8%AF+%D8%B1%D8%A7+%D8%A7%D8%B2+%D8%A7%D9%BE+MahsaNG+%D8%AF%D8%B1%DB%8C%D8%A7%D9%81%D8%AA+%DA%A9%D9%86%DB%8C%D8%AF+%21%21%21
-ss://bm9uZTp0Lm1lL01vcnlWUE4=@127.0.0.1:1080#MahsaNG+share+code%3A+1265fa68
+{
+  "remarks": "MoryVPN | 🇩🇪Germany Fragment",
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.discord.com",
+            "port": 443,
+            "users": [
+              {
+                "id": "9902fc94-31f9-4afe-b37a-82f5790b3d2a",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "De1-moRYVPnbot.PaGES.dEv",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "show": false
+        },
+        "wsSettings": {
+          "path": "/?ed=2560",
+          "headers": {
+            "Host": "De1-moRYVPnbot.PaGES.dEv"
+          }
+        },
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "mark": 255,
+          "tcpNoDelay": true
+        }
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "fragment": {
+          "packets": "tlshello",
+          "length": "10-20",
+          "interval": "10-20"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true,
+          "tcpKeepAliveIdle": 100
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "enabled": true
+      },
+      {
+        "id": "5627785659655799759",
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "proxy",
+        "enabled": true
+      }
+    ]
+  }
+}
