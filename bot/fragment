@@ -52,7 +52,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "www.discord.com",
+            "address": "104.21.69.44",
             "port": 443,
             "users": [
               {
@@ -101,7 +101,7 @@
         "domainStrategy": "AsIs",
         "fragment": {
           "packets": "tlshello",
-          "length": "10-20",
+          "length": "100-200",
           "interval": "10-20"
         }
       },
