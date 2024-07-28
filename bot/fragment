@@ -52,7 +52,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "104.21.69.44",
+            "address": "zula.ir",
             "port": 443,
             "users": [
               {
@@ -101,8 +101,8 @@
         "domainStrategy": "AsIs",
         "fragment": {
           "packets": "tlshello",
-          "length": "100-200",
-          "interval": "10-20"
+          "length": "10-50",
+          "interval": "4-10"
         }
       },
       "streamSettings": {
