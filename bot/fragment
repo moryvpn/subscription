@@ -72,18 +72,18 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "De1-moRYVPnbot.PaGES.dEv",
+          "serverName": "1560a845.De1-1Nd.PaGeS.dEv",
           "alpn": [
             "h2",
             "http/1.1"
           ],
-          "fingerprint": "chrome",
+          "fingerprint": "random",
           "show": false
         },
         "wsSettings": {
           "path": "/?ed=2560",
           "headers": {
-            "Host": "De1-moRYVPnbot.PaGES.dEv"
+            "Host": "1560a845.De1-1Nd.PaGeS.dEv"
           }
         },
         "sockopt": {
@@ -101,8 +101,8 @@
         "domainStrategy": "AsIs",
         "fragment": {
           "packets": "tlshello",
-          "length": "10-50",
-          "interval": "4-10"
+          "length": "20-40",
+          "interval": "2-4"
         }
       },
       "streamSettings": {
