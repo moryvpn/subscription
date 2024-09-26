@@ -72,7 +72,7 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "1560a845.De1-1Nd.PaGeS.dEv",
+          "serverName": "dabF5Ca6.De1-1Nd.PaGeS.dEv",
           "alpn": [
             "h2",
             "http/1.1"
@@ -83,7 +83,7 @@
         "wsSettings": {
           "path": "/?ed=2560",
           "headers": {
-            "Host": "1560a845.De1-1Nd.PaGeS.dEv"
+            "Host": "dabF5Ca6.De1-1Nd.PaGeS.dEv"
           }
         },
         "sockopt": {
