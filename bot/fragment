@@ -56,7 +56,7 @@
             "port": 443,
             "users": [
               {
-                "id": "9902fc94-31f9-4afe-b37a-82f5790b3d2a",
+                "id": "89b3cbba-e6ac-485a-9481-976a0415eab9",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -72,7 +72,7 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "dabF5Ca6.De1-1Nd.PaGeS.dEv",
+          "serverName": "Ff473142f1E494c885D3F1EdbC2Ccde41e25aFF2548f5c4f9A45117c7D5536.mhtG1.fiLegEAr-sg.mE",
           "alpn": [
             "h2",
             "http/1.1"
@@ -83,7 +83,7 @@
         "wsSettings": {
           "path": "/?ed=2560",
           "headers": {
-            "Host": "dabF5Ca6.De1-1Nd.PaGeS.dEv"
+            "Host": "ff473142f1e494c885d3f1edbc2ccde41e25aff2548f5c4f9a45117c7d5536.mhtg1.filegear-sg.me"
           }
         },
         "sockopt": {
